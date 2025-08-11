@@ -2,7 +2,16 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav style={{padding: "1rem", background: "#222"}}>
+    <nav style={{
+        padding: "1rem", 
+        background: "#222",
+        position: "sticky",
+        top: "0",
+        left: "0",
+        height:  "60px",
+        width: "100%",
+        }}>
+
       <ul style={{
         display: "flex",
         gap: "1rem",

@@ -1,3 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: rgba(0, 0, 0, 0.2) 1px solid;
+}
+
+h1, h2, h2, h4, h5, h6, ul, li, a, p {
+  color:white;
+}
+
+svg {
+    width: 24px;
+    height: 24px; 
+    margin-right: 0.5rem;
+}
+
+.spotify {
+  fill: #1ed760;
+}
+
+.facebook {
+  fill: #035fff;
+}
+
+.instagram {
+  fill: #fe720e;
+}
+
+.apple-music {
+  fill: #fb435c;
+}
+
+.bandcamp {
+  fill: #1da0c3;
+}
+
+section > .socials {
+  display: flex;
+  margin-top: auto;
+  margin-right: auto;
+}
+
+section > .socials > :is(.facebook, .spotify,  .instagram, .apple-music, .bandcamp) {
+  height: 2rem;
+  width: 2rem;
+}
+
 .App {
   text-align: center;
 }
