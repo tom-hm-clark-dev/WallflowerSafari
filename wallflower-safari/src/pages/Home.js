@@ -2,7 +2,7 @@ import Button from "../components/Button";
 
 export default function Home() {
   return (
-    <section style= {{ background: "#40e3c8ff", height: "100dvh", padding: "2rem", textAlign: "center" }}>
+    <section style= {{display: "flex", flexDirection: "column", background: "#40e3c8ff", minHeight: "100dvh", padding: "2rem", textAlign: "center" }}>
       <h1 style={{color: "#222"}}>Wallflower Safari</h1>
       <p>Aberystwyth based post punk. Welcome to our official site</p>
       <img 
