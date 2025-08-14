@@ -4,6 +4,7 @@ export default function Section({children}) {
   {{
     display: "flex", 
     flexDirection: "column",
+    alignItems: "center",
     background: "#222", 
     minHeight: "100dvh", 
     padding: "2rem", 
