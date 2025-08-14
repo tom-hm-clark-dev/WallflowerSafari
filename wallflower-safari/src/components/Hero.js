@@ -10,9 +10,9 @@ export default function Hero() {
       flex: "1",
       top: "0",
       left: "0",
-      height: "100dvh",
+      height: "90dvh",
       width: "100%",
-      background: "#f1c4c9",
+      background: "#324342",
       justifyContent: "center",
       alignItems: "center"
     }}

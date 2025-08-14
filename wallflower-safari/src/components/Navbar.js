@@ -14,11 +14,11 @@ export default function Navbar() {
 
       <ul style={{
         display: "flex",
-        gap: "1rem",
+        gap: "4rem",
         listStyle: "none",
         justifyContent: "flex-end",
-        margin: 0,
-        padding: 0
+        margin: "0",
+        padding: "0rem 1rem"
       }}>
         <li><Link style= {{ color: "#fff" }} to="/">Home</Link></li>
         <li><Link style= {{ color: "#fff" }} to="/music">Music</Link></li>
