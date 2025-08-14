@@ -1,17 +1,29 @@
 import React, {useState, useEffect} from "react";
-import Gallery from "../pages/Gallery.css";
+import "../pages/Gallery.css";
 
 export default function Lightbox( {images = [], title} ) {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape") setSelectedImage(null);
-    };
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") {
+      setSelectedIndex(null);
+    } else if (e.key === "ArrowRight") {
+      setSelectedIndex((prev) => {
+        if (prev === null) return null;
+        return (prev + 1) % images.length;
+      });
+    } else if (e.key === "ArrowLeft") {
+      setSelectedIndex((prev) => {
+        if (prev === null) return null;
+        return (prev - 1 + images.length) % images.length;
+      });
+    }
+  };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, 
-  []
+    [images.length]
   );
 
   return (
@@ -26,18 +38,18 @@ export default function Lightbox( {images = [], title} ) {
         key= {index}
         src= {src}
         alt= ""
-        onClick={() => setSelectedImage(src)}>
+        onClick={() => setSelectedIndex(index)}>
         </img>
       ))
       }
       {
-      selectedImage && (
+      selectedIndex !== null && (
         <div 
         className="lightbox" 
-        onClick={() => setSelectedImage(null)}
+        onClick={() => setSelectedIndex(null)}
         >
           <img 
-            src = {selectedImage} 
+            src = {images[selectedIndex]} 
             alt = "" 
             className = "lightbox-image"
             onClick={(e) => e.stopPropagation()}

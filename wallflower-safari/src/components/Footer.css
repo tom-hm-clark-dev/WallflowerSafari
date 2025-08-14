@@ -1,0 +1,44 @@
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  'copyright socials-header disclaimer'
+  'copyright socials disclaimer';
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.copyright {
+  grid-area: copyright;
+}
+
+.socials-header {
+  align-self: flex-start;
+  text-align: center;
+  grid-area: socials-header;
+}
+
+.socials {
+  grid-area: socials;
+  justify-content: center;
+}
+
+.disclaimer {
+  grid-area: disclaimer;
+  text-align: right;
+  justify-self: end;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-areas: 'socials-header'
+    'socials'
+    'copyright'
+    'disclaimer';
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .socials-header, .disclaimer, .copyright {
+    justify-self: center;
+  }
+}

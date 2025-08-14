@@ -15,7 +15,7 @@ export default function Pill({href, children}) {
         alignItems: "center",
         width: "160px",
         padding: "0.5rem 1rem",
-        background: "rgba(0, 0, 0, 0.2)",
+        background: "rgba(0, 0, 0, 0.7)",
         borderRadius: "4px",
         gap: "0.5rem"
     }}

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid rgba(255, 255, 255, 0.5);
+  /* outline: 1px solid rgba(255, 255, 255, 0.5); */
 }
 
 h1, h2, h2, h4, h5, h6, ul, li, a, p {
@@ -18,6 +18,15 @@ svg {
 .icons {
   display: flex;
   flex-direction: row;
+}
+
+.social-icon {
+  transition: all 0.1s ease;
+}
+
+.social-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 .spotify {
@@ -50,6 +59,16 @@ section > .icons > :is(.facebook, .spotify,  .instagram, .apple-music, .bandcamp
   height: 2rem;
   width: 2rem;
 }
+
+@media (max-width: 768px) {
+  footer {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 .App {
   text-align: center;
