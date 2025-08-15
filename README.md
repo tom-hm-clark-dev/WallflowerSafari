@@ -28,3 +28,4 @@ This was created as a personal project to:
 ## Further improvements:
 - Still need to add content across site.
 - Need to get logo, background and hero assets from my desktop computer once I have moved into my new house.
+- Optimise content already there, a lot of large .jpgs that need compressing and potentially converting to .webp
